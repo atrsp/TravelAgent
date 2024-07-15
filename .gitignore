@@ -2,5 +2,6 @@
 .venv
 travelAgentV1.py
 travelAgentV2.py
+travelAgentV3.py
 readme
 agent.py
