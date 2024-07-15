@@ -43,8 +43,8 @@ PS: after these instructions, you terminal should have a "(.venv)" before "PS C:
 
 ### 2. OpenAI Access Key
 
-To work with the OpenAI API, we need to have an access key, which I stored in an ".env" file (The .env file isn't in this repository because it should be kept private).
-This way, we would need to run "source.env" before every time we wish to run our code. 
+To work with the OpenAI API, we need to have an access key, which I stored in a ".env" file (The .env file isn't in this repository because it should be kept private).
+This way, we would need to run "source .env" before every time we wish to run our code. 
 
 ##### To automate this, I used the "dotenv" library:
 
@@ -55,7 +55,7 @@ This way, we would need to run "source.env" before every time we wish to run our
     from dotenv import load_dotenv
 
 ##### - Add this function as the first code line:
-###### This is what automatizes "source.env"
+###### This is what automatizes "source .env"
     load_dotenv()
 
 #
