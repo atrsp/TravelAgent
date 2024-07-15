@@ -6,7 +6,6 @@ from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain import hub
 
-#To Add RAG
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_openai import OpenAIEmbeddings 
 from langchain_community.vectorstores.chroma import Chroma
@@ -30,16 +29,16 @@ def researchAgent(query, llm):
 def loadData():
     loader = WebBaseLoader(
         web_paths= ("https://www.dicasdeviagem.com/inglaterra/",), 
-        bs_kwargs=dict(parse_only=bs4.SoupStrainer(class_= ("postcontentwrap", "pagetitleloading background-imaged loading-dark")))  #inspecionamos a pagina para pegarmos as pts do site que queremos importar e usar (textos e titulo)
+        bs_kwargs=dict(parse_only=bs4.SoupStrainer(class_= ("postcontentwrap", "pagetitleloading background-imaged loading-dark")))  
     )
     docs = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap = 200) #método que faz a separação de tudo que é texto dentro da página em pedaços/docs de 1000 tokens cujos 200 primeiros tokens são iguais ao doc anterior
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap = 200) 
     splits = text_splitter.split_documents(docs)
     vector_store = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
     retriever = vector_store.as_retriever()
     return retriever
 
-def getRelevantDocs (query): #captura os elementos importantes desses docs
+def getRelevantDocs (query): 
     retriever = loadData()
     relevant_documents = retriever.invoke(query)
     return relevant_documents
