@@ -27,19 +27,30 @@
 
 ## Tips:
 > ###### Disclaimer: I developed this project on Windows 11.
+> 
 ### 1. Virtual Environment
   I used a Virtual Environment to download all the libraries listed above.
-##### - Creating the Virtual Environment:
-> ###### This needs to be done before you activate the environment
-    python -m venv .venv
 
-##### - Changing Command Prompt permissions: 
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+  <details>
+  <summary>a. Create a Virtual Environment:</summary>
 
-##### - Activating the environment: 
-    .venv/Scripts/activate   
+  -     python -m venv .venv
+</details> 
+
+  <details>
+  <summary>b. Change Command Prompt permissions:</summary>
+
+  > This needs to be done before you activate the environment
+  -     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+</details> 
+
+<details>
+  <summary>c. Activate the environment:</summary>
+  -     .venv/Scripts/activate
+</details> 
+ 
         
-PS: after these instructions, you terminal should have a "(.venv)" before "PS C:\\...\\_project_folder_" 
+> PS: after these instructions, you terminal should have a "(.venv)" before "PS C:\\...\\_project_folder_" 
 
 ### 2. OpenAI Access Key
 
@@ -48,15 +59,26 @@ This way, we would need to run "source .env" before every time we wish to run ou
 
 ##### To automate this, I used the "dotenv" library:
 
-##### - Installing:  
-    pip install python-dotenv                                                           
+ <details>
+  <summary>a. Install dotenv:</summary>
 
-##### - Importing: 
-    from dotenv import load_dotenv
+  -     pip install python-dotenv
+</details> 
+                                                       
+ <details>
+  <summary>b. Import it in file:</summary>
 
-##### - Add this function as the first code line:
-###### This is what automatizes "source .env"
-    load_dotenv()
+  -     from dotenv import load_dotenv
+</details> 
+
+ <details>
+  <summary>c. Add this function as the first code line:e</summary>
+     
+> This is what automatizes "source .env"
+     
+  -     load_dotenv()
+  
+</details> 
 
 #
 
