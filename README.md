@@ -54,7 +54,7 @@
 
 ### 2. OpenAI Access Key
 
-To work with the OpenAI API, we need to have an access key, which I stored in a ".env" file (The .env file isn't in this repository because it should be kept private).
+> To work with the OpenAI API, we need to have an access key, which I stored in a ".env" file (The .env file isn't in this repository because it should be kept private).
 This way, we would need to run "source .env" before every time we wish to run our code. 
 
 ##### To automate this, I used the "dotenv" library:
