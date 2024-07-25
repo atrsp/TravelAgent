@@ -82,4 +82,4 @@ This way, we would need to run "source .env" before every time we wish to run ou
 
 #
 
-###### This project was taught during NLW Dev, an event hosted by Rocketseat on july 2024, by <a href="https://www.linkedin.com/in/daniel-omar-soria?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Daniel Omar Soria Santos</a>.
+###### This project was taught during NLW Dev, an event hosted by <a href="https://app.rocketseat.com.br/">Rocketseat</a> on july 2024, by <a href="https://www.linkedin.com/in/daniel-omar-soria?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Daniel Omar Soria Santos</a>.
